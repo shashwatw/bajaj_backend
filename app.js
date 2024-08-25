@@ -1,7 +1,11 @@
 //Shashwat Wankhedekar 21BKT0090
 
 const express = require("express");
+const cors = require("cors"); // Import the cors package
 const app = express();
+
+// Enable CORS for all origins
+app.use(cors());
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
@@ -49,6 +53,7 @@ app.post("/bfhl", (req, res) => {
   // Process the data
   const { numbers, alphabets, highestLowercaseAlphabet } = processData(data);
 
+  // Send the response
   // Send the response
   res.json({
     is_success: true,
