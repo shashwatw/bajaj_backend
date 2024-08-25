@@ -66,8 +66,8 @@ app.post("/bfhl", (req, res) => {
   });
 });
 
-// GET route: /bfhl-status (distinct route for GET requests)
-app.get("/bfhl-status", (req, res) => {
+// GET route: /bfhl (distinct route for GET requests)
+app.get("/bfhl", (req, res) => {
   // Hardcoded response for the GET request
   res.status(200).json({
     operation_code: 1,
